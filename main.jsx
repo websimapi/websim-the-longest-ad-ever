@@ -5,7 +5,7 @@ import { Player } from "@websim/remotion/player";
 import { useSegments } from "./useSegments.js";
 import { Root } from "./Root.jsx";
 import { AddSegmentForm } from "./AddSegmentForm.jsx";
-import { useLoadingStore } from "./AddSegmentForm.jsx";
+import { useLoadingStore } from "./loadingStore.js";
 const App = () => {
   const segments = useSegments();
   const { isLoading, loadingMessage } = useLoadingStore();

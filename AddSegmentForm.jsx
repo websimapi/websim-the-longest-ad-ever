@@ -1,12 +1,7 @@
 import { jsxDEV } from "react/jsx-dev-runtime";
 import React, { useState, useCallback } from "react";
-import { create } from "zustand";
+import { useLoadingStore } from "./loadingStore.js";
 import { addSegment } from "./useSegments.js";
-const useLoadingStore = create((set) => ({
-  isLoading: false,
-  loadingMessage: "",
-  setLoading: (isLoading, loadingMessage = "") => set({ isLoading, loadingMessage })
-}));
 const AddSegmentForm = () => {
   const [text, setText] = useState("");
   const [imageFile, setImageFile] = useState(null);
@@ -74,13 +69,13 @@ const AddSegmentForm = () => {
       false,
       {
         fileName: "<stdin>",
-        lineNumber: 73,
+        lineNumber: 67,
         columnNumber: 13
       }
     ),
     /* @__PURE__ */ jsxDEV("label", { htmlFor: "image-upload", className: "file-label", children: previewUrl ? "Change Image" : "Select an Image" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 81,
+      lineNumber: 75,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV(
@@ -95,27 +90,26 @@ const AddSegmentForm = () => {
       false,
       {
         fileName: "<stdin>",
-        lineNumber: 84,
+        lineNumber: 78,
         columnNumber: 13
       }
     ),
     previewUrl && /* @__PURE__ */ jsxDEV("img", { src: previewUrl, alt: "Preview", className: "image-preview" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 90,
+      lineNumber: 84,
       columnNumber: 28
     }),
     /* @__PURE__ */ jsxDEV("button", { type: "submit", disabled: !text || !imageFile, className: "form-button", children: "Add to Ad" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 91,
+      lineNumber: 85,
       columnNumber: 13
     })
   ] }, void 0, true, {
     fileName: "<stdin>",
-    lineNumber: 72,
+    lineNumber: 66,
     columnNumber: 9
   });
 };
 export {
-  AddSegmentForm,
-  useLoadingStore
+  AddSegmentForm
 };

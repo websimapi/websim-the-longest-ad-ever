@@ -1,12 +1,11 @@
 import React from 'react';
-
-const room = new WebsimSocket();
-const collection = room.collection('advert_segment_v2');
+import { collection } from './db.js';
 
 export const useSegments = () => {
     const segments = React.useSyncExternalStore(
         collection.subscribe,
-        collection.getList
+        collection.getList,
+        () => []
     );
     return segments;
 };
