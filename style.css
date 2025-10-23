@@ -1,0 +1,135 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#root {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #1877f2;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.player-container {
+    width: 100%;
+    position: relative;
+    padding-top: 177.77%; /* 9:16 Aspect Ratio */
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.player-container .remotion-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input, .form-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.image-preview {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 6px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+
+.file-label {
+    display: block;
+    background-color: #e4e6eb;
+    color: #4b4f56;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.file-label:hover {
+    background-color: #d8dade;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.form-button {
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-button:hover {
+    background-color: #166fe5;
+}
+
+.form-button:disabled {
+    background-color: #9cb4d8;
+    cursor: not-allowed;
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: #1877f2;
+}
+
