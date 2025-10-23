@@ -9,6 +9,13 @@ import { useLoadingStore } from "./AddSegmentForm.jsx";
 const App = () => {
   const segments = useSegments();
   const { isLoading, loadingMessage } = useLoadingStore();
+  if (!segments) {
+    return /* @__PURE__ */ jsxDEV("div", { className: "loading-indicator", children: "Initializing..." }, void 0, false, {
+      fileName: "<stdin>",
+      lineNumber: 15,
+      columnNumber: 16
+    });
+  }
   const compositionProps = useMemo(() => ({
     segments
   }), [segments]);
@@ -16,7 +23,7 @@ const App = () => {
   return /* @__PURE__ */ jsxDEV("div", { className: "container", children: [
     /* @__PURE__ */ jsxDEV("h1", { children: "The Longest Ad Ever" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 21,
+      lineNumber: 26,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("div", { className: "player-container", children: segments.length > 0 ? /* @__PURE__ */ jsxDEV(
@@ -37,41 +44,41 @@ const App = () => {
       false,
       {
         fileName: "<stdin>",
-        lineNumber: 24,
+        lineNumber: 29,
         columnNumber: 22
       }
     ) : /* @__PURE__ */ jsxDEV("div", { className: "loading-indicator", children: "Loading video..." }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 37,
+      lineNumber: 42,
       columnNumber: 21
     }) }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 22,
+      lineNumber: 27,
       columnNumber: 13
     }),
     /* @__PURE__ */ jsxDEV("h2", { children: "Add Your Clip!" }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 41,
+      lineNumber: 46,
       columnNumber: 13
     }),
     isLoading ? /* @__PURE__ */ jsxDEV("div", { className: "loading-indicator", children: loadingMessage }, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 43,
+      lineNumber: 48,
       columnNumber: 17
     }) : /* @__PURE__ */ jsxDEV(AddSegmentForm, {}, void 0, false, {
       fileName: "<stdin>",
-      lineNumber: 45,
+      lineNumber: 50,
       columnNumber: 17
     })
   ] }, void 0, true, {
     fileName: "<stdin>",
-    lineNumber: 20,
+    lineNumber: 25,
     columnNumber: 9
   });
 };
 const root = createRoot(document.getElementById("root"));
 root.render(/* @__PURE__ */ jsxDEV(App, {}, void 0, false, {
   fileName: "<stdin>",
-  lineNumber: 52,
+  lineNumber: 57,
   columnNumber: 13
 }));

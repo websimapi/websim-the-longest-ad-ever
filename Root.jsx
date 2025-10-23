@@ -2,7 +2,7 @@ import { jsxDEV } from "react/jsx-dev-runtime";
 import React from "react";
 import { AbsoluteFill, Series } from "remotion";
 import { Segment } from "./Segment.jsx";
-const Root = ({ segments }) => {
+const Root = ({ segments = [] }) => {
   const orderedSegments = [...segments].reverse();
   return /* @__PURE__ */ jsxDEV(AbsoluteFill, { style: { backgroundColor: "#1c1e21" }, children: /* @__PURE__ */ jsxDEV(Series, { children: orderedSegments.map((segment) => /* @__PURE__ */ jsxDEV(Series.Sequence, { durationInFrames: segment.durationInFrames || 90, children: /* @__PURE__ */ jsxDEV(
     Segment,
